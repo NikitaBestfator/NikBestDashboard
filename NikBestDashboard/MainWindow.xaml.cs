@@ -22,6 +22,7 @@ public partial class MainWindow : Window
 
     private void LoadModule(string moduleName)
     {
+        
         object? module = moduleName switch
         {
             "Ideas" => new IdeasModule(),
