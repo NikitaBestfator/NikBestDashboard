@@ -1,0 +1,76 @@
+<UserControl x:Class="NikBestDashboard.Modules.IdeasModule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#1E1E2E">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Text="📝 Трекер идей" FontSize="24" FontWeight="Bold" Foreground="#EEEEFF" Margin="0,0,0,15"/>
+
+        <!-- Форма добавления -->
+        <StackPanel Grid.Row="1" Margin="0,0,0,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="TitleTextBox" 
+                         Text="Новая идея..." 
+                         Foreground="#CCCCDD"
+                         Background="#2A2A3E"
+                         BorderBrush="#444466"
+                         Padding="10"
+                         FontSize="14"
+                         VerticalContentAlignment="Center"/>
+                <Button Grid.Column="1" 
+                        Content="➕ Добавить" 
+                        Click="AddIdea_Click"
+                        Background="#7C4DFF" 
+                        Foreground="White" 
+                        FontWeight="Bold"
+                        Padding="15,10"
+                        Margin="10,0,0,0"
+                        BorderThickness="0"
+                        Cursor="Hand"/>
+            </Grid>
+        </StackPanel>
+
+        <!-- Список идей -->
+        <ListBox x:Name="IdeasListBox" 
+                 Grid.Row="2"
+                 Background="#2A2A3E"
+                 BorderBrush="#444466"
+                 BorderThickness="1"
+                 Foreground="#EEEEFF"
+                 FontSize="14">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="#3A3A52" 
+                            CornerRadius="6" 
+                            Padding="10"
+                            Margin="0,3">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Title}" 
+                                       Foreground="#EEEEFF"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" 
+                                       Text="{Binding Status}"
+                                       Foreground="#8888AA"
+                                       Margin="10,0,0,0"
+                                       VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>
