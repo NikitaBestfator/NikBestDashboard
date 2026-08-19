@@ -1,0 +1,33 @@
+﻿<Window x:Class="NikBestDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:modules="clr-namespace:NikBestDashboard.Modules"
+        Title="NikBest Dashboard" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#1E1E2E">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Боковое меню -->
+        <Border Grid.Column="0" Background="#2A2A3E" BorderBrush="#444466" BorderThickness="0,0,1,0">
+            <StackPanel Margin="15">
+                <TextBlock Text="🚀 NikBest" FontSize="20" FontWeight="Bold" Foreground="#C9B1FF" Margin="0,0,0,20"/>
+                
+                <Button Content="📝 Идеи" Tag="Ideas" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
+                <Button Content="📋 Текст" Tag="Titles" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
+                <Button Content="📊 Мобы" Tag="Mobs" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
+                <Button Content="📅 План" Tag="Schedule" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
+
+                <Separator Margin="0,20,0,15" Background="#444466"/>
+
+                <Button Content="⚙️ Настройки" Tag="Settings" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Область контента -->
+        <ContentControl x:Name="ModuleContent" Grid.Column="1" Margin="0"/>
+    </Grid>
+</Window>
