@@ -46,19 +46,16 @@ public partial class UnitsModule : UserControl
 
         var filtered = _items.AsEnumerable();
 
-        // Фильтр по игре
         if (GameFilterComboBox.SelectedItem is ComboBoxItem gameItem && gameItem.Content.ToString() != "Все игры")
         {
             filtered = filtered.Where(i => i.Game == gameItem.Content.ToString());
         }
 
-        // Фильтр по категории
         if (CategoryFilterComboBox.SelectedItem is ComboBoxItem categoryItem && categoryItem.Content.ToString() != "Все категории")
         {
             filtered = filtered.Where(i => i.Category == categoryItem.Content.ToString());
         }
 
-        // Поиск по имени
         var searchText = SearchTextBox.Text.Trim();
         if (!string.IsNullOrEmpty(searchText) && searchText != "Поиск...")
         {
@@ -79,6 +76,28 @@ public partial class UnitsModule : UserControl
         if (!_isLoaded) return;
         ApplyFilter();
     }
+
+    // ===== МЕТОД СРАВНЕНИЯ =====
+
+    private void CompareUnits_Click(object sender, RoutedEventArgs e)
+    {
+        var selectedUnits = UnitsListBox.SelectedItems.Cast<Unit>().ToList();
+        
+        if (selectedUnits.Count < 2)
+        {
+            MessageBox.Show("Выберите хотя бы 2 юнита для сравнения (зажмите Ctrl или Shift)!", 
+                            "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+            return;
+        }
+
+        var dialog = new CompareUnitsDialog(selectedUnits);
+        dialog.Owner = Window.GetWindow(this);
+        dialog.ShowDialog();
+        
+        UnitsListBox.UnselectAll();
+    }
+
+    // ===== ОСТАЛЬНЫЕ МЕТОДЫ =====
 
     private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
     {

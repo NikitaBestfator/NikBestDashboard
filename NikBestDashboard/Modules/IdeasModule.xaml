@@ -16,13 +16,21 @@
         <!-- Панель фильтров -->
         <WrapPanel Grid.Row="1" Margin="0,0,0,15" VerticalAlignment="Center">
             <TextBlock Text="Фильтр:" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
-            
-            <ComboBox x:Name="CategoryFilterComboBox" Width="120" Margin="0,0,10,0" SelectionChanged="OnFilterChanged">
+    
+            <ComboBox x:Name="CategoryFilterComboBox" Width="140" Margin="0,0,10,0" SelectionChanged="OnFilterChanged">
                 <ComboBoxItem Content="Все категории" IsSelected="True"/>
                 <ComboBoxItem Content="Битвы"/>
-                <ComboBoxItem Content="Лаборатория"/>
+                <ComboBoxItem Content="Постройки"/>
+                <ComboBoxItem Content="Топы и списки"/>
+                <ComboBoxItem Content="Эксперименты"/>
+                <ComboBoxItem Content="Игры"/>
+                <ComboBoxItem Content="Моды и код"/>
+                <ComboBoxItem Content="Челленджи"/>
+                <ComboBoxItem Content="Викторина"/>
                 <ComboBoxItem Content="Код"/>
-                <ComboBoxItem Content="Другое"/>
+                <ComboBoxItem Content="Бравл Старс"/>
+                <ComboBoxItem Content="TABS"/>
+                <ComboBoxItem Content="Roblox"/>
             </ComboBox>
 
             <ComboBox x:Name="StatusFilterComboBox" Width="120" Margin="0,0,10,0" SelectionChanged="OnFilterChanged">
@@ -93,7 +101,7 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-
+                            
                             <StackPanel Grid.Column="0">
                                 <TextBlock Text="{Binding Title}" Foreground="#EEEEFF" FontWeight="SemiBold"/>
                                 <StackPanel Orientation="Horizontal" Margin="0,2,0,0">

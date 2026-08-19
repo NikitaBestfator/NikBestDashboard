@@ -7,7 +7,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- Заголовок -->
@@ -17,16 +17,16 @@
         <Border Grid.Row="1" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="140"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" Text="📂 Папка с данными" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                <TextBlock Grid.Column="0" Text="📂 Папка с данными" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center"/>
                 
-                <TextBlock x:Name="DataPathText" Grid.Column="1" Foreground="#FFFFFF" FontSize="13" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                <TextBlock x:Name="DataPathText" Grid.Column="1" Foreground="#FFFFFF" FontSize="13" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="10,0,15,0"/>
 
-                <Button Grid.Column="2" Content="📂 Открыть" Click="OpenDataFolder_Click" Background="#444466" Foreground="White" Padding="12,5" BorderThickness="0" Cursor="Hand" Margin="10,0,0,0"/>
+                <Button Grid.Column="2" Content="📂 Открыть" Click="OpenDataFolder_Click" Background="#444466" Foreground="White" Padding="12,5" BorderThickness="0" Cursor="Hand"/>
             </Grid>
         </Border>
 
@@ -47,30 +47,27 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Название:" Foreground="#8888AA" Grid.Row="0" Grid.Column="0" Margin="0,2,0,2"/>
-                    <TextBlock Text="NikBest Dashboard" Foreground="#EEEEFF" Grid.Row="0" Grid.Column="1" Margin="0,2,0,2"/>
+                    <TextBlock Text="Название:" Foreground="#8888AA" Grid.Row="0" Grid.Column="0" Margin="0,2"/>
+                    <TextBlock Text="NikBest Dashboard" Foreground="#EEEEFF" Grid.Row="0" Grid.Column="1" Margin="0,2"/>
 
-                    <TextBlock Text="Версия:" Foreground="#8888AA" Grid.Row="1" Grid.Column="0" Margin="0,2,0,2"/>
-                    <TextBlock x:Name="VersionText" Text="1.0.0" Foreground="#EEEEFF" Grid.Row="1" Grid.Column="1" Margin="0,2,0,2"/>
+                    <TextBlock Text="Версия:" Foreground="#8888AA" Grid.Row="1" Grid.Column="0" Margin="0,2"/>
+                    <TextBlock x:Name="VersionText" Text="1.0.0" Foreground="#EEEEFF" Grid.Row="1" Grid.Column="1" Margin="0,2"/>
 
-                    <TextBlock Text="Автор:" Foreground="#8888AA" Grid.Row="2" Grid.Column="0" Margin="0,2,0,2"/>
-                    <TextBlock Text="NikBest" Foreground="#EEEEFF" Grid.Row="2" Grid.Column="1" Margin="0,2,0,2"/>
+                    <TextBlock Text="Автор:" Foreground="#8888AA" Grid.Row="2" Grid.Column="0" Margin="0,2"/>
+                    <TextBlock Text="NikBest" Foreground="#EEEEFF" Grid.Row="2" Grid.Column="1" Margin="0,2"/>
 
-                    <TextBlock Text="GitHub:" Foreground="#8888AA" Grid.Row="3" Grid.Column="0" Margin="0,2,0,2"/>
-                    <TextBlock Grid.Row="3" Grid.Column="1" Margin="0,2,0,2">
+                    <TextBlock Text="GitHub:" Foreground="#8888AA" Grid.Row="3" Grid.Column="0" Margin="0,2"/>
+                    <TextBlock Grid.Row="3" Grid.Column="1" Margin="0,2">
                         <Hyperlink NavigateUri="https://github.com/твой-ник/NikBestDashboard" RequestNavigate="Hyperlink_RequestNavigate">
-                            <TextBlock Text="github.com/твой-ник/NikBestDashboard" Foreground="#7C4DFF" FontWeight="SemiBold"/>
+                            <TextBlock Text="github.com/NikitaBestfator/NikBestDashboard" Foreground="#7C4DFF" FontWeight="SemiBold"/>
                         </Hyperlink>
                     </TextBlock>
                 </Grid>
             </StackPanel>
         </Border>
-
-        <!-- Кнопка "Перезапустить" -->
-        <StackPanel Grid.Row="3" Margin="0,10,0,0" HorizontalAlignment="Left">
-            <Button Content="🔄 Перезапустить" Click="RestartApp_Click" 
-                    Background="#444466" Foreground="White" FontWeight="Bold" FontSize="14" 
-                    Padding="15,8" Cursor="Hand" BorderThickness="0"/>
+        
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,5,0,0">
+            <Button Content="🔄 Рестарт" Click="RestartApp_Click" Background="#444466" Foreground="White" FontWeight="Bold" FontSize="13" Padding="10,5" Cursor="Hand" BorderThickness="0"/>
         </StackPanel>
     </Grid>
 </UserControl>

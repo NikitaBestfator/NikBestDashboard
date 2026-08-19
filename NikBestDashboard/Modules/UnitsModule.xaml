@@ -17,10 +17,7 @@
         <WrapPanel Grid.Row="1" Margin="0,0,0,15" VerticalAlignment="Center">
             <TextBlock Text="Фильтр:" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
             
-            <ComboBox x:Name="GameFilterComboBox" Width="120" Margin="0,0,10,0" SelectionChanged="FilterChanged">
-                <ComboBoxItem Content="Все игры" IsSelected="True"/>
-            </ComboBox>
-
+            <ComboBox x:Name="GameFilterComboBox" Width="120" Margin="0,0,10,0" SelectionChanged="FilterChanged"/>
             <ComboBox x:Name="CategoryFilterComboBox" Width="120" Margin="0,0,10,0" SelectionChanged="FilterChanged">
                 <ComboBoxItem Content="Все категории" IsSelected="True"/>
                 <ComboBoxItem Content="Моб"/>
@@ -28,9 +25,11 @@
                 <ComboBoxItem Content="NPC"/>
                 <ComboBoxItem Content="Герой"/>
             </ComboBox>
-
             <TextBox x:Name="SearchTextBox" Width="150" Text="Поиск..." Foreground="#888888" Background="#2A2A3E" BorderBrush="#444466" Padding="5" FontSize="14" 
                      GotFocus="SearchTextBox_GotFocus" LostFocus="SearchTextBox_LostFocus" TextChanged="SearchTextBox_TextChanged"/>
+
+            <!-- ===== КНОПКА СРАВНЕНИЯ ===== -->
+            <Button Content="⚔️ Сравнить" Click="CompareUnits_Click" Background="#7C4DFF" Foreground="White" FontWeight="Bold" Padding="12,5" BorderThickness="0" Cursor="Hand" Margin="10,0,0,0"/>
         </WrapPanel>
 
         <!-- Форма добавления -->
@@ -67,38 +66,44 @@
         </Grid>
 
         <!-- Список юнитов -->
-        <ListBox x:Name="UnitsListBox" Grid.Row="3" Background="#2A2A3E" BorderBrush="#444466" BorderThickness="1" Foreground="#EEEEFF" FontSize="14">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border Background="#3A3A52" CornerRadius="6" Padding="10" Margin="0,3">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+        <ListBox x:Name="UnitsListBox" Grid.Row="3" 
+         Background="#2A2A3E" 
+         BorderBrush="#444466" 
+         BorderThickness="1" 
+         Foreground="#EEEEFF" 
+         FontSize="14"
+         SelectionMode="Multiple">
+    <ListBox.ItemTemplate>
+        <DataTemplate>
+            <Border Background="#3A3A52" CornerRadius="6" Padding="10" Margin="0,3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                            <StackPanel Grid.Column="0">
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Name}" Foreground="#EEEEFF" FontWeight="SemiBold" FontSize="15"/>
-                                    <TextBlock Text="{Binding Category}" Foreground="#C9B1FF" FontSize="12" Margin="10,0,0,0"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-                                    <TextBlock Text="{Binding Game}" Foreground="#8888AA" FontSize="12" Margin="0,0,10,0"/>
-                                    <TextBlock Text="{Binding Health, StringFormat='❤ {0}'}" Foreground="#E53935" FontSize="12" Margin="0,0,10,0"/>
-                                    <TextBlock Text="{Binding Attack, StringFormat='⚔ {0}'}" Foreground="#FF8A65" FontSize="12" Margin="0,0,10,0"/>
-                                    <TextBlock Text="{Binding Defense, StringFormat='🛡 {0}'}" Foreground="#4FC3F7" FontSize="12" Margin="0,0,10,0"/>
-                                    <TextBlock Text="{Binding AttackType}" Foreground="#8888AA" FontSize="12"/>
-                                </StackPanel>
-                            </StackPanel>
+                    <StackPanel Grid.Column="0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}" Foreground="#EEEEFF" FontWeight="SemiBold" FontSize="15"/>
+                            <TextBlock Text="{Binding Category}" Foreground="#C9B1FF" FontSize="12" Margin="10,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                            <TextBlock Text="{Binding Game}" Foreground="#8888AA" FontSize="12" Margin="0,0,10,0"/>
+                            <TextBlock Text="{Binding Health, StringFormat='❤ {0}'}" Foreground="#E53935" FontSize="12" Margin="0,0,10,0"/>
+                            <TextBlock Text="{Binding Attack, StringFormat='⚔ {0}'}" Foreground="#FF8A65" FontSize="12" Margin="0,0,10,0"/>
+                            <TextBlock Text="{Binding Defense, StringFormat='🛡 {0}'}" Foreground="#4FC3F7" FontSize="12" Margin="0,0,10,0"/>
+                            <TextBlock Text="{Binding AttackType}" Foreground="#8888AA" FontSize="12"/>
+                        </StackPanel>
+                    </StackPanel>
 
-                            <TextBlock Grid.Column="1" Text="{Binding Description}" Foreground="#8888AA" FontSize="12" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                    <TextBlock Grid.Column="1" Text="{Binding Description}" Foreground="#8888AA" FontSize="12" VerticalAlignment="Center" Margin="0,0,15,0"/>
 
-                            <Button Grid.Column="2" Content="🗑️" Click="DeleteItem_Click" Tag="{Binding Id}" Background="Transparent" BorderThickness="0" Foreground="#E53935" Cursor="Hand"/>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+                    <Button Grid.Column="2" Content="🗑️" Click="DeleteItem_Click" Tag="{Binding Id}" Background="Transparent" BorderThickness="0" Foreground="#E53935" Cursor="Hand"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </ListBox.ItemTemplate>
+</ListBox>
     </Grid>
 </UserControl>

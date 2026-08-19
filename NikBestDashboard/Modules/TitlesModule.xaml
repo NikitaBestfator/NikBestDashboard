@@ -7,6 +7,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -23,6 +24,7 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
                     <TextBox x:Name="TopicTextBox" Grid.Column="0" Text="Введите тему..." Foreground="#888888" Background="#2A2A3E" BorderBrush="#444466" Padding="10" FontSize="14" VerticalContentAlignment="Center"
@@ -34,12 +36,31 @@
                     </ComboBox>
 
                     <Button Grid.Column="2" Content="✨ Сгенерировать" Click="Generate_Click" Background="#7C4DFF" Foreground="White" FontWeight="Bold" Padding="15,10" Margin="10,0,0,0" BorderThickness="0" Cursor="Hand"/>
+
+                    <Button Grid.Column="3" Content="📊 Анализ" Click="AnalyzeTitle_Click" Background="#444466" Foreground="White" FontWeight="Bold" Padding="12,10" Margin="5,0,0,0" BorderThickness="0" Cursor="Hand"/>
                 </Grid>
             </StackPanel>
         </Border>
 
-        <!-- Результаты генерации -->
+        <!-- Шаблоны заголовков -->
         <Border Grid.Row="2" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
+            <StackPanel>
+                <TextBlock Text="📋 Шаблоны заголовков" Foreground="#CCCCDD" FontWeight="SemiBold" Margin="0,0,0,10"/>
+                
+                <WrapPanel>
+                    <Button Content="⚔️ Битва" Click="ApplyTemplate_Click" Tag="Битва" Background="#3A3A52" Foreground="White" Padding="10,5" BorderThickness="0" Cursor="Hand" Margin="0,0,5,5"/>
+                    <Button Content="🔥 Челлендж" Click="ApplyTemplate_Click" Tag="Челлендж" Background="#3A3A52" Foreground="White" Padding="10,5" BorderThickness="0" Cursor="Hand" Margin="0,0,5,5"/>
+                    <Button Content="🏆 ТОП" Click="ApplyTemplate_Click" Tag="ТОП" Background="#3A3A52" Foreground="White" Padding="10,5" BorderThickness="0" Cursor="Hand" Margin="0,0,5,5"/>
+                    <Button Content="🧪 Эксперимент" Click="ApplyTemplate_Click" Tag="Эксперимент" Background="#3A3A52" Foreground="White" Padding="10,5" BorderThickness="0" Cursor="Hand" Margin="0,0,5,5"/>
+                    <Button Content="📝 Обзор" Click="ApplyTemplate_Click" Tag="Обзор" Background="#3A3A52" Foreground="White" Padding="10,5" BorderThickness="0" Cursor="Hand" Margin="0,0,5,5"/>
+                    <Button Content="🎮 Игры" Click="ApplyTemplate_Click" Tag="Игры" Background="#3A3A52" Foreground="White" Padding="10,5" BorderThickness="0" Cursor="Hand" Margin="0,0,5,5"/>
+                    <Button Content="💻 Код" Click="ApplyTemplate_Click" Tag="Код" Background="#3A3A52" Foreground="White" Padding="10,5" BorderThickness="0" Cursor="Hand" Margin="0,0,5,5"/>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Результаты генерации -->
+        <Border Grid.Row="3" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
             <StackPanel>
                 <TextBlock Text="💡 Варианты" Foreground="#CCCCDD" FontWeight="SemiBold" Margin="0,0,0,10"/>
 
@@ -64,12 +85,12 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
 
-                <TextBlock x:Name="NoResultsText" Text="Введите тему и нажмите «Сгенерировать»" Foreground="#666688" FontSize="13" Margin="0,5,0,0" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="NoResultsText" Text="Введите тему и нажмите «Сгенерировать» или выберите шаблон" Foreground="#666688" FontSize="13" Margin="0,5,0,0" HorizontalAlignment="Center"/>
             </StackPanel>
         </Border>
 
         <!-- Библиотека сохранённых текстов -->
-        <Border Grid.Row="3" Background="#2A2A3E" CornerRadius="10" Padding="15" BorderBrush="#444466" BorderThickness="1">
+        <Border Grid.Row="4" Background="#2A2A3E" CornerRadius="10" Padding="15" BorderBrush="#444466" BorderThickness="1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -103,7 +124,8 @@
                                         </StackPanel>
                                     </StackPanel>
 
-                                    <Button Grid.Column="1" Content="⭐" Click="ToggleFavorite_Click" Tag="{Binding}" Background="Transparent" BorderThickness="0" Foreground="{Binding IsFavorite, Converter={StaticResource BooleanToStarColorConverter}}" Cursor="Hand" Margin="0,0,5,0" ToolTip="В избранное"/>
+                                    <!-- ИСПРАВЛЕНО: без конвертера -->
+                                    <Button Grid.Column="1" Content="⭐" Click="ToggleFavorite_Click" Tag="{Binding}" Background="Transparent" BorderThickness="0" Foreground="#FFD700" Cursor="Hand" Margin="0,0,5,0" ToolTip="В избранное"/>
                                     <Button Grid.Column="2" Content="📋" Click="CopyLibrary_Click" Tag="{Binding}" Background="Transparent" BorderThickness="0" Foreground="#7C4DFF" Cursor="Hand" Margin="0,0,5,0" ToolTip="Копировать"/>
                                     <Button Grid.Column="3" Content="🗑️" Click="DeleteLibrary_Click" Tag="{Binding}" Background="Transparent" BorderThickness="0" Foreground="#E53935" Cursor="Hand" ToolTip="Удалить"/>
                                 </Grid>
