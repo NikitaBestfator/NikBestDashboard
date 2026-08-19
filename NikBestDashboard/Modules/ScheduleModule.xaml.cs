@@ -11,13 +11,15 @@ namespace NikBestDashboard.Modules;
 
 public partial class ScheduleModule : UserControl
 {
-    private List<ScheduleItem> _items;
+    private List<ScheduleItem> _items = new List<ScheduleItem>();
     private readonly ScheduleService _service = new ScheduleService();
+    private bool _isLoaded = false;
 
     public ScheduleModule()
     {
         InitializeComponent();
         LoadItems();
+        _isLoaded = true;
     }
 
     private void LoadItems()
@@ -28,17 +30,36 @@ public partial class ScheduleModule : UserControl
 
     private void ApplyFilter()
     {
+        // Если список ещё не загружен — выходим
+        if (_items == null) return;
+
         var filtered = _items.AsEnumerable();
 
-        if (StatusFilterComboBox.SelectedItem is ComboBoxItem statusItem && statusItem.Content.ToString() != "Все статусы")
+        if (StatusFilterComboBox.SelectedItem is ComboBoxItem statusItem && 
+            statusItem.Content.ToString() != "Все статусы")
         {
             filtered = filtered.Where(i => i.Status == statusItem.Content.ToString());
         }
 
-        ScheduleListBox.ItemsSource = filtered.OrderBy(i => i.Status == "В планах" ? 0 : i.Status == "В работе" ? 1 : i.Status == "Готово" ? 2 : 3).ToList();
+        var order = new Dictionary<string, int>
+        {
+            { "В планах", 0 },
+            { "В работе", 1 },
+            { "Готово", 2 },
+            { "Опубликовано", 3 }
+        };
+
+        ScheduleListBox.ItemsSource = filtered
+            .OrderBy(i => order.ContainsKey(i.Status) ? order[i.Status] : 999)
+            .ToList();
     }
 
-    private void FilterChanged(object sender, SelectionChangedEventArgs e) => ApplyFilter();
+    private void FilterChanged(object sender, SelectionChangedEventArgs e)
+    {
+        // Игнорируем вызов, если модуль ещё не загружен
+        if (!_isLoaded) return;
+        ApplyFilter();
+    }
 
     private void TitleTextBox_GotFocus(object sender, RoutedEventArgs e)
     {
@@ -106,7 +127,6 @@ public partial class ScheduleModule : UserControl
             var item = _items.FirstOrDefault(i => i.Id == id);
             if (item == null) return;
 
-            // Циклическое изменение статуса
             var statuses = new[] { "В планах", "В работе", "Готово", "Опубликовано" };
             var currentIndex = Array.IndexOf(statuses, item.Status);
             var nextIndex = (currentIndex + 1) % statuses.Length;
