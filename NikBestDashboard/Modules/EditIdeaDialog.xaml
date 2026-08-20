@@ -5,44 +5,6 @@
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
         Background="#1E1E2E">
-    <Window.Resources>
-
-        <!-- ===== СТИЛЬ ДЛЯ COMBOBOX (ИЗ ВИКТОРИНЫ — РАБОЧИЙ) ===== -->
-        <Style TargetType="ComboBox">
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="BorderBrush" Value="#555577"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Padding" Value="8,5"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Height" Value="32"/>
-            <Setter Property="FontWeight" Value="Normal"/>
-        </Style>
-
-        <Style TargetType="ComboBoxItem">
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="Padding" Value="10,8"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#E0E0E0"/>
-                    <Setter Property="Foreground" Value="Black"/>
-                </Trigger>
-                <Trigger Property="IsSelected" Value="True">
-                    <Setter Property="Background" Value="White"/>
-                    <Setter Property="Foreground" Value="Black"/>
-                </Trigger>
-                <Trigger Property="IsHighlighted" Value="True">
-                    <Setter Property="Background" Value="#E0E0E0"/>
-                    <Setter Property="Foreground" Value="Black"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-    </Window.Resources>
-
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -64,13 +26,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <StackPanel Grid.Column="0" Margin="0,0,10,0">
                 <TextBlock Text="Категория:" Foreground="#CCCCDD" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <!-- УБРАНЫ ЯВНЫЕ ЭЛЕМЕНТЫ! -->
                 <ComboBox x:Name="CategoryComboBox" FontSize="14" Height="32"/>
             </StackPanel>
-            
+
             <StackPanel Grid.Column="1" Margin="10,0,0,0">
                 <TextBlock Text="Приоритет:" Foreground="#CCCCDD" FontWeight="SemiBold" Margin="0,0,0,5"/>
                 <ComboBox x:Name="PriorityComboBox" FontSize="14" Height="32"/>

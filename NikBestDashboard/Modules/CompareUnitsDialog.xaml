@@ -27,10 +27,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Заголовок -->
         <TextBlock Grid.Row="0" Text="⚔️ Сравнение юнитов" FontSize="22" FontWeight="Bold" Foreground="#EEEEFF" Margin="0,0,0,15"/>
 
-        <!-- Таблица сравнения -->
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
             <ItemsControl x:Name="ComparisonGrid" Margin="0,0,0,10">
                 <ItemsControl.ItemsPanel>
@@ -46,12 +44,10 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <!-- Название характеристики -->
                             <Border Grid.Column="0" CornerRadius="4,0,0,4">
                                 <TextBlock Text="{Binding Key}" Foreground="#CCCCDD" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,0,0,0"/>
                             </Border>
 
-                            <!-- Значения -->
                             <Border Grid.Column="1" CornerRadius="0,4,4,0">
                                 <ItemsControl ItemsSource="{Binding Values}">
                                     <ItemsControl.ItemsPanel>

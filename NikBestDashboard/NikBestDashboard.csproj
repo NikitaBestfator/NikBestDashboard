@@ -18,6 +18,24 @@
     <ItemGroup>
       <Page Remove="Themes\DarkThemes.xaml" />
       <Page Include="Themes\DarkTheme.xaml" />
+      <None Remove="Modules\UnitsModule.xaml" />
+      <Page Include="Modules\UnitsModule.xaml" />
+      <None Remove="Modules\TitlesModule.xaml" />
+      <Page Include="Modules\TitlesModule.xaml" />
+      <None Remove="Modules\SettingsModule.xaml" />
+      <Page Include="Modules\SettingsModule.xaml" />
+      <None Remove="Modules\ScheduleModule.xaml" />
+      <Page Include="Modules\ScheduleModule.xaml" />
+      <None Remove="Modules\IdeasModule.xaml" />
+      <Page Include="Modules\IdeasModule.xaml" />
+      <None Remove="Modules\EditIdeaDialog.xaml" />
+      <Page Include="Modules\EditIdeaDialog.xaml" />
+      <None Remove="Modules\CompareUnitsDialog.xaml" />
+      <Page Include="Modules\CompareUnitsDialog.xaml" />
+      <None Remove="Modules\AddToScheduleDialog.xaml" />
+      <Page Include="Modules\AddToScheduleDialog.xaml" />
+      <None Remove="MainWindow.xaml" />
+      <Page Include="MainWindow.xaml" />
     </ItemGroup>
 
 </Project>

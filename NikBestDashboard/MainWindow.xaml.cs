@@ -25,7 +25,7 @@ public partial class MainWindow : Window
         object? module = moduleName switch
         {
             "Ideas" => new IdeasModule(),
-            "Titles" => new TitlesModule(),  // <-- ЗАМЕНИЛИ ЗАГЛУШКУ
+            "Titles" => new TitlesModule(),
             "Units" => new UnitsModule(),
             "Schedule" => new ScheduleModule(),
             "Settings" => new SettingsModule(),

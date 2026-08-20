@@ -11,7 +11,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Боковое меню -->
         <Border Grid.Column="0" Background="#2A2A3E" BorderBrush="#444466" BorderThickness="0,0,1,0">
             <StackPanel Margin="15">
                 <TextBlock Text="🚀 NikBest" FontSize="20" FontWeight="Bold" Foreground="#C9B1FF" Margin="0,0,0,20"/>
@@ -22,13 +21,11 @@
                 <Button Content="📅 План" Tag="Schedule" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
                 
                 <Separator Margin="0,20,0,15" Background="#444466"/>
-
-                <!-- ⚙️ Настройки — теперь есть! -->
+                
                 <Button Content="⚙️ Настройки" Tag="Settings" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
             </StackPanel>
         </Border>
 
-        <!-- Область контента -->
         <ContentControl x:Name="ModuleContent" Grid.Column="1" Margin="0"/>
     </Grid>
 </Window>
