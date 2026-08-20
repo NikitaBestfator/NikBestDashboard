@@ -30,6 +30,7 @@ public partial class ModsModule : UserControl
     {
         _items = _service.Load();
         ApplyFilter();
+        UpdateStats();
     }
 
     private void LoadCommands()
@@ -100,8 +101,6 @@ public partial class ModsModule : UserControl
         }
     }
 
-    // ===== МЕТОДЫ МОДОВ =====
-
     private void ApplyFilter()
     {
         if (_items == null) return;
@@ -129,7 +128,6 @@ public partial class ModsModule : UserControl
         ModsListBox.ItemsSource = filtered.OrderBy(i => i.Name).ToList();
     }
 
-    // ===== ИСПРАВЛЕНО: разные имена =====
     private void FilterChanged_CheckBox(object sender, RoutedEventArgs e)
     {
         if (!_isLoaded) return;
@@ -201,10 +199,10 @@ public partial class ModsModule : UserControl
         }
     }
 
-    // ===== МЕТОДЫ КОМАНД =====
-
     private void CommandSearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
+        if (CommandsListBox == null) return; // <-- ИСПРАВЛЕНО
+
         var searchText = CommandSearchTextBox.Text.Trim();
         if (string.IsNullOrEmpty(searchText) || searchText == "Поиск...")
         {
@@ -236,8 +234,6 @@ public partial class ModsModule : UserControl
             }
         }
     }
-
-    // ===== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ =====
 
     private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
     {
@@ -291,5 +287,15 @@ public partial class ModsModule : UserControl
             CommandSearchTextBox.Text = "Поиск...";
             CommandSearchTextBox.Foreground = new SolidColorBrush(Color.FromRgb(136, 136, 136));
         }
+    }
+    private void UpdateStats()
+    {
+        var total = _items.Count;
+        var libraries = _items.Count(i => i.IsLibrary);
+        var nonLibraries = total - libraries;
+
+        ModsTotal.Text = total.ToString();
+        ModsLibraries.Text = libraries.ToString();
+        ModsNonLibraries.Text = nonLibraries.ToString();
     }
 }

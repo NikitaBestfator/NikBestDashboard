@@ -11,5 +11,7 @@ public class Idea
     public string Priority { get; set; } = "Средний";
     public string Status { get; set; } = "В планах";
     public bool IsArchived { get; set; } = false;
+    public bool IsPinned { get; set; } = false;
+    public string Tags { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 }

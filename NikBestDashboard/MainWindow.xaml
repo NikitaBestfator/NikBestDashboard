@@ -20,10 +20,13 @@
                 <Button Content="📊 Юниты" Tag="Units" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
                 <Button Content="📅 План" Tag="Schedule" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
                 <Button Content="📦 Моды" Tag="Mods" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
+                <Button Content="🔍 Поиск" Tag="Search" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
                 
                 <Separator Margin="0,20,0,15" Background="#444466"/>
                 
                 <Button Content="⚙️ Настройки" Tag="Settings" Click="MenuButton_Click" Style="{StaticResource MenuButton}"/>
+                
+                <Button Content="⏱️ Таймер" Tag="Timer" Click="OpenTimer_Click" Style="{StaticResource MenuButton}"/>
             </StackPanel>
         </Border>
 

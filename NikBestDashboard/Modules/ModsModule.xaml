@@ -6,22 +6,46 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- Заголовок -->
-        <TextBlock Grid.Row="0" Text="📦 Моды и команды" FontSize="24" FontWeight="Bold" Foreground="#EEEEFF" Margin="0,0,0,15"/>
+        <TextBlock Grid.Row="0" Text="📦 Моды и команды" FontSize="24" FontWeight="Bold" Foreground="#EEEEFF" Margin="0,0,0,5"/>
+
+        <!-- Статистика -->
+        <WrapPanel Grid.Row="1" Margin="0,0,0,10" VerticalAlignment="Center">
+            <Border Background="#2A2A3E" CornerRadius="6" Padding="8,4" Margin="0,0,8,0" BorderBrush="#444466" BorderThickness="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="📦 Всего:" Foreground="#8888AA" FontSize="12"/>
+                    <TextBlock x:Name="ModsTotal" Text="0" Foreground="#EEEEFF" FontSize="12" FontWeight="Bold" Margin="3,0,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Background="#2A2A3E" CornerRadius="6" Padding="8,4" Margin="0,0,8,0" BorderBrush="#444466" BorderThickness="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="📚 Библиотек:" Foreground="#8888AA" FontSize="12"/>
+                    <TextBlock x:Name="ModsLibraries" Text="0" Foreground="#4FC3F7" FontSize="12" FontWeight="Bold" Margin="3,0,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Background="#2A2A3E" CornerRadius="6" Padding="8,4" Margin="0,0,8,0" BorderBrush="#444466" BorderThickness="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="⚔️ Модов:" Foreground="#8888AA" FontSize="12"/>
+                    <TextBlock x:Name="ModsNonLibraries" Text="0" Foreground="#FF8A65" FontSize="12" FontWeight="Bold" Margin="3,0,0,0"/>
+                </StackPanel>
+            </Border>
+        </WrapPanel>
 
         <!-- Вкладки -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,15">
             <Button x:Name="ModsTabButton" Content="📦 Моды" Click="SwitchTab_Click" Tag="Mods" 
                     Background="#7C4DFF" Foreground="White" FontWeight="Bold" Padding="15,8" BorderThickness="0" Cursor="Hand" Margin="0,0,5,0"/>
             <Button x:Name="CommandsTabButton" Content="⚡ Команды" Click="SwitchTab_Click" Tag="Commands" 
                     Background="#444466" Foreground="White" FontWeight="Bold" Padding="15,8" BorderThickness="0" Cursor="Hand" Margin="0,0,5,0"/>
         </StackPanel>
 
-        <!-- ===== РАЗДЕЛ МОДОВ ===== -->
-        <Grid x:Name="ModsPanel" Grid.Row="2">
+        <!-- Раздел МОДОВ -->
+        <Grid x:Name="ModsPanel" Grid.Row="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -31,7 +55,6 @@
             <!-- Фильтры -->
             <WrapPanel Grid.Row="0" Margin="0,0,0,15" VerticalAlignment="Center">
                 <TextBlock Text="Фильтр:" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
-
                 <ComboBox x:Name="CategoryFilterComboBox" Width="140" Margin="0,0,10,0" SelectionChanged="FilterChanged_ComboBox">
                     <ComboBoxItem Content="Все категории" IsSelected="True"/>
                     <ComboBoxItem Content="Библиотека"/>
@@ -41,15 +64,12 @@
                     <ComboBoxItem Content="Техника"/>
                     <ComboBoxItem Content="Утилиты"/>
                 </ComboBox>
-
-                <CheckBox x:Name="ShowLibrariesCheckBox" Content="Показывать библиотеки" IsChecked="True" Foreground="#CCCCDD"
-                          Margin="10,0,10,0" VerticalAlignment="Center" Click="FilterChanged_CheckBox"/>
-
+                <CheckBox x:Name="ShowLibrariesCheckBox" Content="Показывать библиотеки" IsChecked="True" Foreground="#CCCCDD" Margin="10,0,10,0" VerticalAlignment="Center" Click="FilterChanged_CheckBox"/>
                 <TextBox x:Name="SearchTextBox" Width="150" Text="Поиск..." Foreground="#888888" Background="#2A2A3E" BorderBrush="#444466" Padding="5" FontSize="14" 
                          GotFocus="SearchTextBox_GotFocus" LostFocus="SearchTextBox_LostFocus" TextChanged="SearchTextBox_TextChanged"/>
             </WrapPanel>
 
-            <!-- Форма добавления мода -->
+            <!-- Форма добавления -->
             <Border Grid.Row="1" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -58,10 +78,8 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-
                     <TextBox x:Name="NameTextBox" Grid.Column="0" Text="Название мода..." Foreground="#888888" Background="#2A2A3E" BorderBrush="#444466" Padding="10" FontSize="14" VerticalContentAlignment="Center"
                              GotFocus="NameTextBox_GotFocus" LostFocus="NameTextBox_LostFocus"/>
-
                     <ComboBox x:Name="CategoryComboBox" Grid.Column="1" Width="120" Margin="10,0,0,0">
                         <ComboBoxItem Content="Библиотека"/>
                         <ComboBoxItem Content="Мобы" IsSelected="True"/>
@@ -70,9 +88,7 @@
                         <ComboBoxItem Content="Техника"/>
                         <ComboBoxItem Content="Утилиты"/>
                     </ComboBox>
-
                     <CheckBox x:Name="IsLibraryCheckBox" Grid.Column="2" Content="Библиотека" Foreground="#CCCCDD" Margin="10,0,0,0" VerticalAlignment="Center"/>
-
                     <Button Grid.Column="3" Content="➕ Добавить" Click="AddMod_Click" Background="#7C4DFF" Foreground="White" FontWeight="Bold" Padding="15,10" Margin="10,0,0,0" BorderThickness="0" Cursor="Hand"/>
                 </Grid>
             </Border>
@@ -89,7 +105,6 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-
                                 <StackPanel Grid.Column="0">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding Name}" Foreground="#EEEEFF" FontWeight="SemiBold" FontSize="15"/>
@@ -98,7 +113,6 @@
                                     </StackPanel>
                                     <TextBlock Text="{Binding Description}" Foreground="#8888AA" FontSize="12" TextTrimming="CharacterEllipsis" Margin="0,2,0,0" MaxWidth="300"/>
                                 </StackPanel>
-
                                 <Button Grid.Column="1" Content="✏️" Click="EditMod_Click" Tag="{Binding Id}" Background="Transparent" BorderThickness="0" Foreground="#8888AA" Cursor="Hand" Margin="0,0,5,0"/>
                                 <Button Grid.Column="2" Content="🗑️" Click="DeleteMod_Click" Tag="{Binding Id}" Background="Transparent" BorderThickness="0" Foreground="#E53935" Cursor="Hand"/>
                             </Grid>
@@ -108,41 +122,45 @@
             </ListBox>
         </Grid>
 
-        <!-- ===== РАЗДЕЛ КОМАНД ===== -->
-        <Grid x:Name="CommandsPanel" Grid.Row="2" Visibility="Collapsed">
+        <!-- Раздел КОМАНД -->
+        <Grid x:Name="CommandsPanel" Grid.Row="3" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- Поиск команд -->
             <WrapPanel Grid.Row="0" Margin="0,0,0,15" VerticalAlignment="Center">
                 <TextBlock Text="Поиск команды:" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
                 <TextBox x:Name="CommandSearchTextBox" Width="250" Text="Поиск..." Foreground="#888888" Background="#2A2A3E" BorderBrush="#444466" Padding="5" FontSize="14" 
                          GotFocus="CommandSearchTextBox_GotFocus" LostFocus="CommandSearchTextBox_LostFocus" TextChanged="CommandSearchTextBox_TextChanged"/>
             </WrapPanel>
 
-            <!-- Список команд -->
             <ListBox x:Name="CommandsListBox" Grid.Row="1" Background="#2A2A3E" BorderBrush="#444466" BorderThickness="1" Foreground="#EEEEFF" FontSize="14">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Border Background="#3A3A52" CornerRadius="6" Padding="10" Margin="0,3">
+                        <Border Background="#3A3A52" CornerRadius="8" Padding="10" Margin="0,5">
                             <Grid>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-                                <StackPanel Grid.Column="0">
+                                <!-- Иконка категории -->
+                                <TextBlock Grid.Column="0" Text="{Binding CategoryIcon}" FontSize="24" VerticalAlignment="Center" Margin="0,0,10,0"/>
+
+                                <StackPanel Grid.Column="1">
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Command}" Foreground="#FFD700" FontWeight="Bold" FontSize="14"/>
-                                        <TextBlock Text="{Binding Category}" Foreground="#C9B1FF" FontSize="11" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding Name}" Foreground="#EEEEFF" FontWeight="SemiBold" FontSize="14"/>
+                                        <TextBlock Text="{Binding Category}" Foreground="#C9B1FF" FontSize="11" Margin="8,0,0,0"/>
+                                        <TextBlock Text="(библиотека)" Foreground="#4FC3F7" FontSize="11" Margin="5,0,0,0" 
+                                                   Visibility="{Binding IsLibrary, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                                     </StackPanel>
-                                    <TextBlock Text="{Binding Description}" Foreground="#8888AA" FontSize="12" TextWrapping="Wrap" Margin="0,2,0,0"/>
-                                    <TextBlock Text="{Binding Example}" Foreground="#666688" FontSize="12" FontStyle="Italic" Margin="0,2,0,0" Visibility="{Binding Example, Converter={StaticResource StringToVisibilityConverter}}"/>
+                                    <TextBlock Text="{Binding Description}" Foreground="#8888AA" FontSize="12" TextTrimming="CharacterEllipsis" Margin="0,2,0,0"/>
                                 </StackPanel>
 
-                                <Button Grid.Column="1" Content="📋" Click="CopyCommand_Click" Tag="{Binding Command}" Background="Transparent" BorderThickness="0" Foreground="#7C4DFF" Cursor="Hand" ToolTip="Копировать команду" Margin="10,0,0,0"/>
+                                <Button Grid.Column="2" Content="🗑️" Click="DeleteMod_Click" Tag="{Binding Id}" 
+                                        Background="Transparent" BorderThickness="0" Foreground="#E53935" Cursor="Hand"/>
                             </Grid>
                         </Border>
                     </DataTemplate>

@@ -26,6 +26,7 @@ public partial class IdeasModule : UserControl
     {
         _ideas = _service.Load();
         ApplyFilters();
+        UpdateStats();
     }
 
     private void ApplyFilters()
@@ -47,6 +48,11 @@ public partial class IdeasModule : UserControl
         }
 
         IdeasListBox.ItemsSource = filtered.ToList();
+        
+        IdeasListBox.ItemsSource = filtered
+            .OrderByDescending(i => i.IsPinned)
+            .ThenBy(i => i.Title)
+            .ToList();
     }
 
     private void OnFilterChanged(object sender, SelectionChangedEventArgs e)
@@ -146,6 +152,35 @@ public partial class IdeasModule : UserControl
         {
             TitleTextBox.Text = "Новая идея...";
             TitleTextBox.Foreground = new SolidColorBrush(Color.FromRgb(136, 136, 136));
+        }
+    }
+    private void UpdateStats()
+    {
+        var total = _ideas.Count;
+        var active = _ideas.Count(i => !i.IsArchived);
+        var work = _ideas.Count(i => i.Status == "В работе" && !i.IsArchived);
+        var done = _ideas.Count(i => i.Status == "Готово" && !i.IsArchived);
+        var archived = _ideas.Count(i => i.IsArchived);
+
+        TotalCount.Text = total.ToString();
+        ActiveCount.Text = active.ToString();
+        WorkCount.Text = work.ToString();
+        DoneCount.Text = done.ToString();
+        ArchivedCount.Text = archived.ToString();
+        StatsText.Text = $"({total} идей)";
+    }
+    
+    private void PinIdea_Click(object sender, RoutedEventArgs e)
+    {
+        if (sender is Button btn && btn.Tag is string id)
+        {
+            var idea = _ideas.FirstOrDefault(i => i.Id == id);
+            if (idea != null)
+            {
+                idea.IsPinned = !idea.IsPinned;
+                _service.Save(_ideas);
+                LoadIdeas();
+            }
         }
     }
 }

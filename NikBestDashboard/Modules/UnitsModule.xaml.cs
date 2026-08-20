@@ -27,6 +27,7 @@ public partial class UnitsModule : UserControl
         _items = _service.Load();
         UpdateGameFilter();
         ApplyFilter();
+        UpdateStats();
     }
 
     private void UpdateGameFilter()
@@ -77,8 +78,6 @@ public partial class UnitsModule : UserControl
         ApplyFilter();
     }
 
-    // ===== МЕТОД СРАВНЕНИЯ =====
-
     private void CompareUnits_Click(object sender, RoutedEventArgs e)
     {
         var selectedUnits = UnitsListBox.SelectedItems.Cast<Unit>().ToList();
@@ -96,8 +95,6 @@ public partial class UnitsModule : UserControl
         
         UnitsListBox.UnselectAll();
     }
-
-    // ===== ОСТАЛЬНЫЕ МЕТОДЫ =====
 
     private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
     {
@@ -253,5 +250,13 @@ public partial class UnitsModule : UserControl
                 }
             }
         }
+    }
+    private void UpdateStats()
+    {
+        var total = _items.Count;
+        var games = _items.Select(i => i.Game).Distinct().Count();
+
+        UnitsTotal.Text = total.ToString();
+        UnitsGames.Text = games.ToString();
     }
 }

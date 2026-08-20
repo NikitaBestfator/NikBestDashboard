@@ -49,7 +49,15 @@ public class IdeaService
         try
         {
             var json = File.ReadAllText(_filePath);
-            return JsonSerializer.Deserialize<List<Idea>>(json) ?? new List<Idea>();
+            var ideas = JsonSerializer.Deserialize<List<Idea>>(json) ?? new List<Idea>();
+        
+            // Если поле Tags отсутствует — подставляем пустую строку
+            foreach (var idea in ideas)
+            {
+                idea.Tags ??= string.Empty;
+            }
+        
+            return ideas;
         }
         catch
         {

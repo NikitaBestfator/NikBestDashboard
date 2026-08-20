@@ -18,6 +18,8 @@
     <ItemGroup>
       <Page Remove="Themes\DarkThemes.xaml" />
       <Page Include="Modules\ModsModule.xaml" />
+      <Page Include="Modules\RecordingTimer.xaml" />
+      <Page Include="Modules\SearchModule.xaml" />
       <Page Include="Themes\DarkTheme.xaml" />
       <None Remove="Modules\UnitsModule.xaml" />
       <Page Include="Modules\UnitsModule.xaml" />
@@ -37,6 +39,13 @@
       <Page Include="Modules\AddToScheduleDialog.xaml" />
       <None Remove="MainWindow.xaml" />
       <Page Include="MainWindow.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Data\mods.json" />
+      <Content Include="Data\mods.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

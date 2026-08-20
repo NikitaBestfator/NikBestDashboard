@@ -26,6 +26,7 @@ public partial class ScheduleModule : UserControl
     {
         _items = _service.Load();
         ApplyFilter();
+        UpdateStats();
     }
 
     private void ApplyFilter()
@@ -135,5 +136,19 @@ public partial class ScheduleModule : UserControl
             _service.Save(_items);
             LoadItems();
         }
+    }
+    private void UpdateStats()
+    {
+        var total = _items.Count;
+        var planned = _items.Count(i => i.Status == "В планах");
+        var work = _items.Count(i => i.Status == "В работе");
+        var done = _items.Count(i => i.Status == "Готово");
+        var published = _items.Count(i => i.Status == "Опубликовано");
+
+        ScheduleTotal.Text = total.ToString();
+        SchedulePlanned.Text = planned.ToString();
+        ScheduleWork.Text = work.ToString();
+        ScheduleDone.Text = done.ToString();
+        SchedulePublished.Text = published.ToString();
     }
 }

@@ -29,6 +29,7 @@ public partial class TitlesModule : UserControl
     {
         _library = _service.Load();
         ApplyLibraryFilter();
+        UpdateStats();
     }
 
     private void ApplyLibraryFilter()
@@ -170,8 +171,6 @@ public partial class TitlesModule : UserControl
         };
     }
 
-    // ===== АНАЛИЗ ЗАГОЛОВКА =====
-
     private void AnalyzeTitle_Click(object sender, RoutedEventArgs e)
     {
         var topic = TopicTextBox.Text.Trim();
@@ -228,8 +227,6 @@ public partial class TitlesModule : UserControl
         return result.ToString();
     }
 
-    // ===== БЕЗОПАСНОЕ КОПИРОВАНИЕ В БУФЕР ОБМЕНА =====
-
     private void SafeCopyToClipboard(string text)
     {
         for (int attempt = 0; attempt < 3; attempt++)
@@ -247,8 +244,6 @@ public partial class TitlesModule : UserControl
             }
         }
     }
-
-    // ===== ОСТАЛЬНЫЕ МЕТОДЫ =====
 
     private void SaveGenerated_Click(object sender, RoutedEventArgs e)
     {
@@ -360,5 +355,18 @@ public partial class TitlesModule : UserControl
             TopicTextBox.Text = "Введите тему...";
             TopicTextBox.Foreground = new SolidColorBrush(Color.FromRgb(136, 136, 136));
         }
+    }
+    
+    private void UpdateStats()
+    {
+        var total = _library.Count;
+        var titles = _library.Count(i => i.Type == "Название");
+        var covers = _library.Count(i => i.Type == "Обложка");
+        var favorites = _library.Count(i => i.IsFavorite);
+
+        TextTotal.Text = total.ToString();
+        TextTitles.Text = titles.ToString();
+        TextCovers.Text = covers.ToString();
+        TextFavorites.Text = favorites.ToString();
     }
 }

@@ -1,101 +1,1082 @@
 [
-  { "Name": "Super TNT", "Category": "Оружие", "Description": "Добавляет мощные виды TNT с различными эффектами", "Author": "SuperTNT Team", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "TL Skin and Cape", "Category": "Утилиты", "Description": "Позволяет установить скин и плащ через TLauncher", "Author": "TLauncher", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Carpenter's Blocks", "Category": "Стройка", "Description": "Позволяет создавать блоки с текстурой других блоков и разными формами", "Author": "Mineshopper", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Custom NPC", "Category": "Мобы", "Description": "Создание собственных NPC с диалогами, торговлей и квестами", "Author": "Noppes", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "PTRLib", "Category": "Библиотека", "Description": "Библиотека для модов PTR", "Author": "PTR", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Decocraft", "Category": "Стройка", "Description": "Добавляет огромное количество декоративных предметов и мебели", "Author": "RazzleberryFox", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "JourneyMap", "Category": "Утилиты", "Description": "Мини-карта с возможностью просмотра в реальном времени", "Author": "Techbrew", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Techguns", "Category": "Оружие", "Description": "Добавляет современное оружие, броню и технологии", "Author": "Techguns Team", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Chisels and Bits", "Category": "Стройка", "Description": "Позволяет создавать мелкие детали и формы из блоков", "Author": "AlgorithmX2", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "ConnectedTexturesMod", "Category": "Утилиты", "Description": "Соединяет текстуры блоков для более плавного вида", "Author": "tterrag1098", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Chisel", "Category": "Стройка", "Description": "Добавляет множество новых вариантов блоков с различными текстурами", "Author": "tterrag1098", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Security Craft", "Category": "Техника", "Description": "Система безопасности: замки, камеры, сигнализация", "Author": "Geforce132", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Trapcraft", "Category": "Техника", "Description": "Добавляет ловушки и механизмы для защиты", "Author": "Geforce132", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Iron Chests", "Category": "Утилиты", "Description": "Добавляет сундуки из различных материалов с большим объёмом", "Author": "ProgWML6", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Iron Furnaces", "Category": "Техника", "Description": "Добавляет улучшенные печи из различных материалов", "Author": "ProgWML6", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Apocalyptic Disaster Bucket", "Category": "Оружие", "Description": "Добавляет ведра с разрушительными эффектами", "Author": "Apocalyptic", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Flan's Mod", "Category": "Оружие", "Description": "Добавляет оружие, транспорт и военную технику", "Author": "Flan", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "CarpentersBlocksCachedResources", "Category": "Библиотека", "Description": "Библиотека для Carpenter's Blocks", "Author": "Mineshopper", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "iChunUtil", "Category": "Библиотека", "Description": "Библиотека для модов iChun", "Author": "iChun", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Portal Gun", "Category": "Техника", "Description": "Добавляет портальную пушку из игры Portal", "Author": "iChun", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Rikmulds Core Mod", "Category": "Библиотека", "Description": "Библиотека для модов Rikmuld", "Author": "Rikmuld", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "The Camping Mod", "Category": "Утилиты", "Description": "Добавляет палатки, спальные мешки и кемпинговое снаряжение", "Author": "Pumpkin", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "McHorse's McLib", "Category": "Библиотека", "Description": "Библиотека для модов McHorse", "Author": "McHorse", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "MetaMorph", "Category": "Утилиты", "Description": "Позволяет менять свой облик на других мобов", "Author": "iChun", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "MrCrayfish's Furniture Mod", "Category": "Стройка", "Description": "Добавляет современную мебель и предметы интерьера", "Author": "MrCrayfish", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "MrCrayfish's Device Mod", "Category": "Техника", "Description": "Добавляет компьютеры, принтеры и другие устройства", "Author": "MrCrayfish", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "MalisisCore", "Category": "Библиотека", "Description": "Библиотека для модов Malisis", "Author": "Malisis", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "MalisisDoors", "Category": "Стройка", "Description": "Добавляет красивые и функциональные двери", "Author": "Malisis", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "SecretRoomsMod", "Category": "Техника", "Description": "Добавляет секретные проходы и скрытые комнаты", "Author": "Wynntris", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Obfuscate", "Category": "Библиотека", "Description": "Библиотека для модов MrCrayfish", "Author": "MrCrayfish", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Macaw's Doors", "Category": "Стройка", "Description": "Добавляет красивые двери различных стилей", "Author": "Macaw", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "CreativeCore", "Category": "Библиотека", "Description": "Библиотека для модов Creative", "Author": "Creative", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "ItemPhysic Full", "Category": "Утилиты", "Description": "Добавляет физику для предметов: они падают и разлетаются реалистично", "Author": "Creative", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Industrial Craft", "Category": "Техника", "Description": "Классический мод на технику и индустрию", "Author": "IC2 Team", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "BuildCraft", "Category": "Техника", "Description": "Автоматизация, трубы, механизмы и транспорт", "Author": "BuildCraft Team", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "DivineRPG", "Category": "Мобы", "Description": "Добавляет новые измерения, мобов и боссов", "Author": "DivineRPG Team", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Morph", "Category": "Утилиты", "Description": "Позволяет превращаться в убитых мобов", "Author": "iChun", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "BiblioCraft", "Category": "Стройка", "Description": "Добавляет книги, полки, столы и другие предметы для дома", "Author": "Nuchaz", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "More Player Models", "Category": "Утилиты", "Description": "Расширяет возможности кастомизации персонажа", "Author": "Noppes", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Fancy Block Particles", "Category": "Утилиты", "Description": "Улучшает эффекты частиц при разрушении блоков", "Author": "Killjoy", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "EnderCore", "Category": "Библиотека", "Description": "Библиотека для модов Ender", "Author": "Ender", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Ender IO", "Category": "Техника", "Description": "Мощный мод на технологии, энергию и автоматизацию", "Author": "Ender", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "LittleTiles", "Category": "Стройка", "Description": "Позволяет создавать мелкие блоки и детали", "Author": "Creative", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Lucky Block", "Category": "Утилиты", "Description": "Добавляет удачные блоки с разными эффектами", "Author": "Player", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "OptiFine", "Category": "Утилиты", "Description": "Улучшает производительность и графику игры", "Author": "sp614x", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "EnderCore-1.12.2-0.5.78-core", "Category": "Библиотека", "Description": "Библиотека для EnderCore", "Author": "Ender", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "AutoConfig", "Category": "Библиотека", "Description": "Автоматическая настройка конфигураций", "Author": "AutoConfig", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "AutoSave", "Category": "Утилиты", "Description": "Автоматическое сохранение игры с настраиваемым интервалом", "Author": "AutoSave", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Ultimate Car Mod", "Category": "Техника", "Description": "Добавляет множество автомобилей и транспортных средств", "Author": "Ultimate", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Traveler's Backpack", "Category": "Утилиты", "Description": "Добавляет рюкзаки с большим объёмом и функцией сна", "Author": "Tiviacz", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Varied Commodities", "Category": "Стройка", "Description": "Добавляет множество декоративных предметов", "Author": "Varied", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Locks", "Category": "Техника", "Description": "Добавляет замки для сундуков и дверей", "Author": "Locks", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Mo'Bends", "Category": "Утилиты", "Description": "Делает анимацию мобов более плавной и реалистичной", "Author": "MoBends", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Extra Utilities", "Category": "Техника", "Description": "Добавляет множество полезных механизмов и предметов", "Author": "Extra Utilities", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Dynamic Trees", "Category": "Утилиты", "Description": "Добавляет реалистичные растущие деревья", "Author": "Dynamic Trees", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Just Enough Items (JEI)", "Category": "Утилиты", "Description": "Показывает все рецепты крафта", "Author": "JEI", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Baubles", "Category": "Библиотека", "Description": "Библиотека для аксессуаров", "Author": "Baubles", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Guide-API", "Category": "Библиотека", "Description": "API для создания гайдов", "Author": "Guide-API", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Patchouli", "Category": "Библиотека", "Description": "Библиотека для создания книг", "Author": "Patchouli", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "CraftTweaker", "Category": "Утилиты", "Description": "Позволяет изменять рецепты", "Author": "CraftTweaker", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Bookshelf", "Category": "Библиотека", "Description": "Библиотека для модов", "Author": "Bookshelf", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Enchantment Descriptions", "Category": "Утилиты", "Description": "Показывает описание зачарований", "Author": "Enchantment", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Cyclic", "Category": "Техника", "Description": "Добавляет множество полезных предметов", "Author": "Cyclic", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "CodeChickenLib", "Category": "Библиотека", "Description": "Библиотека для модов CodeChicken", "Author": "CodeChicken", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Not Enough Items (NEI)", "Category": "Утилиты", "Description": "Показывает рецепты и информацию", "Author": "NEI", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Mutant Beasts", "Category": "Мобы", "Description": "Добавляет мутировавших мобов", "Author": "Mutant", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "GraveStone Mod", "Category": "Утилиты", "Description": "Добавляет могилы для хранения инвентаря", "Author": "GraveStone", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Prefab", "Category": "Стройка", "Description": "Добавляет готовые постройки", "Author": "Prefab", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "RailCraft", "Category": "Техника", "Description": "Добавляет сложные железные дороги", "Author": "RailCraft", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "GustNov's Motorsport", "Category": "Техника", "Description": "Спортивные автомобили", "Author": "GustNov", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "C.M.A", "Category": "Техника", "Description": "Автомобили", "Author": "CMA", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Pixel Auto - Pack of LADA", "Category": "Техника", "Description": "Автомобили LADA", "Author": "Pixel", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "New Cars", "Category": "Техника", "Description": "Новые автомобили", "Author": "NewCars", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Russian Dream", "Category": "Техника", "Description": "Российские автомобили", "Author": "RussianDream", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Potato Vehicle Industrial", "Category": "Техника", "Description": "Индустриальные транспортные средства", "Author": "Potato", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Bookworm", "Category": "Утилиты", "Description": "Добавляет книги", "Author": "Bookworm", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Zoo and Wild Animals Rebuilt ZAWA", "Category": "Мобы", "Description": "Добавляет диких животных", "Author": "ZAWA", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Cactus's Vehicle Pack", "Category": "Техника", "Description": "Набор транспортных средств", "Author": "Cactus", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Satiscraftory Pack", "Category": "Техника", "Description": "Набор из 4 модов", "Author": "Satiscraftory", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "LLibrary", "Category": "Библиотека", "Description": "Библиотека для модов", "Author": "LLibrary", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "llibrary-core-1.0.11-1.12.2", "Category": "Библиотека", "Description": "Ядро LLibrary", "Author": "LLibrary", "Version": "1.12.2", "IsLibrary": true },
-  { "Name": "Instant Massive Structures", "Category": "Стройка", "Description": "Добавляет огромные структуры", "Author": "Instant", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Instant Structures Mod", "Category": "Стройка", "Description": "Готовые постройки", "Author": "Instant", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "WorldEdit", "Category": "Утилиты", "Description": "Инструмент для редактирования мира", "Author": "WorldEdit", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Warstuff Legacy", "Category": "Оружие", "Description": "Добавляет оружие", "Author": "Warstuff", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Cyan Warrior Swords Mod", "Category": "Оружие", "Description": "Добавляет мечи", "Author": "CyanWarrior", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Retro Decorations", "Category": "Стройка", "Description": "Добавляет ретро-декор", "Author": "Retro", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Apples+", "Category": "Утилиты", "Description": "Добавляет новые виды яблок", "Author": "Apples", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Tolaserblade", "Category": "Оружие", "Description": "Добавляет лазерные мечи", "Author": "Tolaserblade", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Saitama-OnePunchMan", "Category": "Оружие", "Description": "Добавляет способности из аниме", "Author": "Saitama", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Azure RPG Items", "Category": "Оружие", "Description": "RPG-предметы", "Author": "Azure", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Ore Excavation", "Category": "Утилиты", "Description": "Добыча руды одной кнопкой", "Author": "OreExcavation", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "EXO-craft", "Category": "Техника", "Description": "Экзоскелеты и технологии", "Author": "EXO", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Hats", "Category": "Утилиты", "Description": "Добавляет шляпы", "Author": "Hats", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Skin Layers 3D", "Category": "Утилиты", "Description": "3D-слои для скинов", "Author": "SkinLayers", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "RainbowMods", "Category": "Утилиты", "Description": "Добавляет радужные эффекты", "Author": "Rainbow", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "GUNS RPG", "Category": "Оружие", "Description": "RPG-оружие", "Author": "GUNS", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Lots of Things Mod", "Category": "Утилиты", "Description": "Добавляет много всего", "Author": "LotsOfThings", "Version": "1.12.2", "IsLibrary": false },
-  { "Name": "Super Stick Sword", "Category": "Оружие", "Description": "Супер-меч", "Author": "SuperStick", "Version": "1.12.2", "IsLibrary": false }
+  {
+    "Id": "1",
+    "Name": "Super TNT",
+    "Category": "Оружие",
+    "Description": "Добавляет мощные виды TNT с различными эффектами",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "2",
+    "Name": "TL Skin and Cape",
+    "Category": "Утилиты",
+    "Description": "Позволяет установить скин и плащ через TLauncher",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "3",
+    "Name": "Carpenter's Blocks",
+    "Category": "Стройка",
+    "Description": "Позволяет создавать блоки с текстурой других блоков и разными формами",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "4",
+    "Name": "Custom NPC",
+    "Category": "Мобы",
+    "Description": "Создание собственных NPC с диалогами, торговлей и квестами",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "5",
+    "Name": "PTRLib",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов PTR",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "6",
+    "Name": "Decocraft",
+    "Category": "Стройка",
+    "Description": "Добавляет огромное количество декоративных предметов и мебели",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "7",
+    "Name": "JourneyMap",
+    "Category": "Утилиты",
+    "Description": "Мини-карта с возможностью просмотра в реальном времени",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "8",
+    "Name": "Techguns",
+    "Category": "Оружие",
+    "Description": "Добавляет современное оружие, броню и технологии",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "9",
+    "Name": "Chisels and Bits",
+    "Category": "Стройка",
+    "Description": "Позволяет создавать мелкие детали и формы из блоков",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "10",
+    "Name": "ConnectedTexturesMod",
+    "Category": "Утилиты",
+    "Description": "Соединяет текстуры блоков для более плавного вида",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "11",
+    "Name": "Chisel",
+    "Category": "Стройка",
+    "Description": "Добавляет множество новых вариантов блоков с различными текстурами",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "12",
+    "Name": "Security Craft",
+    "Category": "Техника",
+    "Description": "Система безопасности: замки, камеры, сигнализация",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "13",
+    "Name": "Trapcraft",
+    "Category": "Техника",
+    "Description": "Добавляет ловушки и механизмы для защиты",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "14",
+    "Name": "Iron Chests",
+    "Category": "Утилиты",
+    "Description": "Добавляет сундуки из различных материалов с большим объёмом",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "15",
+    "Name": "Iron Furnaces",
+    "Category": "Техника",
+    "Description": "Добавляет улучшенные печи из различных материалов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "16",
+    "Name": "Apocalyptic Disaster Bucket",
+    "Category": "Оружие",
+    "Description": "Добавляет ведра с разрушительными эффектами",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "17",
+    "Name": "Flan's Mod",
+    "Category": "Оружие",
+    "Description": "Добавляет оружие, транспорт и военную технику",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "18",
+    "Name": "CarpentersBlocksCachedResources",
+    "Category": "Библиотека",
+    "Description": "Библиотека для Carpenter's Blocks",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "19",
+    "Name": "iChunUtil",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов iChun",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "20",
+    "Name": "Portal Gun",
+    "Category": "Техника",
+    "Description": "Добавляет портальную пушку из игры Portal",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "21",
+    "Name": "Rikmulds Core Mod",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов Rikmuld",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "22",
+    "Name": "The Camping Mod",
+    "Category": "Утилиты",
+    "Description": "Добавляет палатки, спальные мешки и кемпинговое снаряжение",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "23",
+    "Name": "McHorse's McLib",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов McHorse",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "24",
+    "Name": "MetaMorph",
+    "Category": "Утилиты",
+    "Description": "Позволяет менять свой облик на других мобов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "25",
+    "Name": "MrCrayfish's Furniture Mod",
+    "Category": "Стройка",
+    "Description": "Добавляет современную мебель и предметы интерьера",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "26",
+    "Name": "MrCrayfish's Device Mod",
+    "Category": "Техника",
+    "Description": "Добавляет компьютеры, принтеры и другие устройства",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "27",
+    "Name": "MalisisCore",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов Malisis",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "28",
+    "Name": "MalisisDoors",
+    "Category": "Стройка",
+    "Description": "Добавляет красивые и функциональные двери",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "29",
+    "Name": "SecretRoomsMod",
+    "Category": "Техника",
+    "Description": "Добавляет секретные проходы и скрытые комнаты",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "30",
+    "Name": "Obfuscate",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов MrCrayfish",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "31",
+    "Name": "Macaw's Doors",
+    "Category": "Стройка",
+    "Description": "Добавляет красивые двери различных стилей",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "32",
+    "Name": "CreativeCore",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов Creative",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "33",
+    "Name": "ItemPhysic Full",
+    "Category": "Утилиты",
+    "Description": "Добавляет физику для предметов: они падают и разлетаются реалистично",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "34",
+    "Name": "Industrial Craft",
+    "Category": "Техника",
+    "Description": "Классический мод на технику и индустрию",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "35",
+    "Name": "BuildCraft",
+    "Category": "Техника",
+    "Description": "Автоматизация, трубы, механизмы и транспорт",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "36",
+    "Name": "DivineRPG",
+    "Category": "Мобы",
+    "Description": "Добавляет новые измерения, мобов и боссов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "37",
+    "Name": "Morph",
+    "Category": "Утилиты",
+    "Description": "Позволяет превращаться в убитых мобов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "38",
+    "Name": "BiblioCraft",
+    "Category": "Стройка",
+    "Description": "Добавляет книги, полки, столы и другие предметы для дома",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "39",
+    "Name": "More Player Models",
+    "Category": "Утилиты",
+    "Description": "Расширяет возможности кастомизации персонажа",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "40",
+    "Name": "Fancy Block Particles",
+    "Category": "Утилиты",
+    "Description": "Улучшает эффекты частиц при разрушении блоков",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "41",
+    "Name": "EnderCore",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов Ender",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "42",
+    "Name": "Ender IO",
+    "Category": "Техника",
+    "Description": "Мощный мод на технологии, энергию и автоматизацию",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "43",
+    "Name": "LittleTiles",
+    "Category": "Стройка",
+    "Description": "Позволяет создавать мелкие блоки и детали",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "44",
+    "Name": "Lucky Block",
+    "Category": "Утилиты",
+    "Description": "Добавляет удачные блоки с разными эффектами",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "45",
+    "Name": "OptiFine",
+    "Category": "Утилиты",
+    "Description": "Улучшает производительность и графику игры",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "46",
+    "Name": "AutoConfig",
+    "Category": "Библиотека",
+    "Description": "Автоматическая настройка конфигураций",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "47",
+    "Name": "AutoSave",
+    "Category": "Утилиты",
+    "Description": "Автоматическое сохранение игры с настраиваемым интервалом",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "48",
+    "Name": "Ultimate Car Mod",
+    "Category": "Техника",
+    "Description": "Добавляет множество автомобилей и транспортных средств",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "49",
+    "Name": "Traveler's Backpack",
+    "Category": "Утилиты",
+    "Description": "Добавляет рюкзаки с большим объёмом и функцией сна",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "50",
+    "Name": "Varied Commodities",
+    "Category": "Стройка",
+    "Description": "Добавляет множество декоративных предметов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "51",
+    "Name": "Locks",
+    "Category": "Техника",
+    "Description": "Добавляет замки для сундуков и дверей",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "52",
+    "Name": "Mo'Bends",
+    "Category": "Утилиты",
+    "Description": "Делает анимацию мобов более плавной и реалистичной",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "53",
+    "Name": "Extra Utilities",
+    "Category": "Техника",
+    "Description": "Добавляет множество полезных механизмов и предметов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "54",
+    "Name": "Dynamic Trees",
+    "Category": "Утилиты",
+    "Description": "Добавляет реалистичные растущие деревья",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "55",
+    "Name": "Just Enough Items",
+    "Category": "Утилиты",
+    "Description": "Показывает все рецепты крафта (JEI)",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "56",
+    "Name": "Baubles",
+    "Category": "Библиотека",
+    "Description": "Библиотека для аксессуаров",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "57",
+    "Name": "Guide-API",
+    "Category": "Библиотека",
+    "Description": "API для создания гайдов",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "58",
+    "Name": "Patchouli",
+    "Category": "Библиотека",
+    "Description": "Библиотека для создания книг",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "59",
+    "Name": "CraftTweaker",
+    "Category": "Утилиты",
+    "Description": "Позволяет изменять рецепты",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "60",
+    "Name": "Bookshelf",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "61",
+    "Name": "Enchantment Descriptions",
+    "Category": "Утилиты",
+    "Description": "Показывает описание зачарований",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "62",
+    "Name": "Cyclic",
+    "Category": "Техника",
+    "Description": "Добавляет множество полезных предметов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "63",
+    "Name": "CodeChickenLib",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов CodeChicken",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "64",
+    "Name": "Not Enough Items",
+    "Category": "Утилиты",
+    "Description": "Показывает рецепты и информацию (NEI)",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "65",
+    "Name": "Mutant Beasts",
+    "Category": "Мобы",
+    "Description": "Добавляет мутировавших мобов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "66",
+    "Name": "GraveStone Mod",
+    "Category": "Утилиты",
+    "Description": "Добавляет могилы для хранения инвентаря",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "67",
+    "Name": "Prefab",
+    "Category": "Стройка",
+    "Description": "Добавляет готовые постройки",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "68",
+    "Name": "RailCraft",
+    "Category": "Техника",
+    "Description": "Добавляет сложные железные дороги",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "69",
+    "Name": "GustNov's Motorsport",
+    "Category": "Техника",
+    "Description": "Спортивные автомобили",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "70",
+    "Name": "C.M.A",
+    "Category": "Техника",
+    "Description": "Автомобили",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "71",
+    "Name": "Pixel Auto - Pack of LADA",
+    "Category": "Техника",
+    "Description": "Автомобили LADA",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "72",
+    "Name": "New Cars",
+    "Category": "Техника",
+    "Description": "Новые автомобили",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "73",
+    "Name": "Russian Dream",
+    "Category": "Техника",
+    "Description": "Российские автомобили",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "74",
+    "Name": "Potato Vehicle Industrial",
+    "Category": "Техника",
+    "Description": "Индустриальные транспортные средства",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "75",
+    "Name": "Bookworm",
+    "Category": "Утилиты",
+    "Description": "Добавляет книги",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "76",
+    "Name": "Zoo and Wild Animals Rebuilt",
+    "Category": "Мобы",
+    "Description": "Добавляет диких животных (ZAWA)",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "77",
+    "Name": "Cactus's Vehicle Pack",
+    "Category": "Техника",
+    "Description": "Набор транспортных средств",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "78",
+    "Name": "Satiscraftory Pack",
+    "Category": "Техника",
+    "Description": "Набор из 4 модов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "79",
+    "Name": "LLibrary",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "80",
+    "Name": "LLibrary Core",
+    "Category": "Библиотека",
+    "Description": "Ядро LLibrary",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "81",
+    "Name": "Instant Massive Structures",
+    "Category": "Стройка",
+    "Description": "Добавляет огромные структуры",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "82",
+    "Name": "Instant Structures Mod",
+    "Category": "Стройка",
+    "Description": "Готовые постройки",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "83",
+    "Name": "WorldEdit",
+    "Category": "Утилиты",
+    "Description": "Инструмент для редактирования мира",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "84",
+    "Name": "Warstuff Legacy",
+    "Category": "Оружие",
+    "Description": "Добавляет оружие",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "85",
+    "Name": "Cyan Warrior Swords",
+    "Category": "Оружие",
+    "Description": "Добавляет мечи",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "86",
+    "Name": "Retro Decorations",
+    "Category": "Стройка",
+    "Description": "Добавляет ретро-декор",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "87",
+    "Name": "Apples+",
+    "Category": "Утилиты",
+    "Description": "Добавляет новые виды яблок",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "88",
+    "Name": "Tolaserblade",
+    "Category": "Оружие",
+    "Description": "Добавляет лазерные мечи",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "89",
+    "Name": "Saitama One Punch Man",
+    "Category": "Оружие",
+    "Description": "Добавляет способности из аниме",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "90",
+    "Name": "Azure RPG Items",
+    "Category": "Оружие",
+    "Description": "RPG-предметы",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "91",
+    "Name": "Ore Excavation",
+    "Category": "Утилиты",
+    "Description": "Добыча руды одной кнопкой",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "92",
+    "Name": "EXO-craft",
+    "Category": "Техника",
+    "Description": "Экзоскелеты и технологии",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "93",
+    "Name": "Hats",
+    "Category": "Утилиты",
+    "Description": "Добавляет шляпы",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "94",
+    "Name": "Skin Layers 3D",
+    "Category": "Утилиты",
+    "Description": "3D-слои для скинов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "95",
+    "Name": "RainbowMods",
+    "Category": "Утилиты",
+    "Description": "Добавляет радужные эффекты",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "96",
+    "Name": "GUNS RPG",
+    "Category": "Оружие",
+    "Description": "RPG-оружие",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "97",
+    "Name": "Lots of Things",
+    "Category": "Утилиты",
+    "Description": "Добавляет много всего",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "98",
+    "Name": "Super Stick Sword",
+    "Category": "Оружие",
+    "Description": "Супер-меч",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "99",
+    "Name": "SEUS Renewed",
+    "Category": "Утилиты",
+    "Description": "Самый крутой шейдер, но требовательный",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "100",
+    "Name": "Dominator Workbench",
+    "Category": "Техника",
+    "Description": "Добавляет мощный верстак",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "101",
+    "Name": "WayStones",
+    "Category": "Утилиты",
+    "Description": "Добавляет камни для быстрого перемещения",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "102",
+    "Name": "Carry On",
+    "Category": "Утилиты",
+    "Description": "Позволяет переносить блоки и сундуки",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "103",
+    "Name": "Mouse Tweaks",
+    "Category": "Утилиты",
+    "Description": "Улучшает управление мышью в инвентаре",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "104",
+    "Name": "Biomes O' Plenty",
+    "Category": "Утилиты",
+    "Description": "Добавляет множество новых биомов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "105",
+    "Name": "Macaw's Bridges",
+    "Category": "Стройка",
+    "Description": "Добавляет красивые мосты",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "106",
+    "Name": "Macaw's Furniture",
+    "Category": "Стройка",
+    "Description": "Добавляет мебель",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "107",
+    "Name": "Macaw's Fences and Walls",
+    "Category": "Стройка",
+    "Description": "Добавляет заборы и стены",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "108",
+    "Name": "Macaw's Trapdoors",
+    "Category": "Стройка",
+    "Description": "Добавляет люки",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "109",
+    "Name": "Collective",
+    "Category": "Библиотека",
+    "Description": "Библиотека для модов",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "110",
+    "Name": "Tree Harvester",
+    "Category": "Утилиты",
+    "Description": "Автоматическая рубка деревьев",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "111",
+    "Name": "Serene Seasons",
+    "Category": "Утилиты",
+    "Description": "Добавляет смену времён года",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "112",
+    "Name": "Macaw's Lights and Lamps",
+    "Category": "Стройка",
+    "Description": "Добавляет светильники",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "113",
+    "Name": "Corpse",
+    "Category": "Утилиты",
+    "Description": "Добавляет трупы для хранения инвентаря",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "114",
+    "Name": "Macaw's Roofs",
+    "Category": "Стройка",
+    "Description": "Добавляет крыши",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "115",
+    "Name": "Macaw's Windows",
+    "Category": "Стройка",
+    "Description": "Добавляет окна",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "116",
+    "Name": "Mantle",
+    "Category": "Библиотека",
+    "Description": "Библиотека для Tinkers Construct",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "117",
+    "Name": "Tinkers Construct",
+    "Category": "Техника",
+    "Description": "Классический мод на создание инструментов",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "118",
+    "Name": "Macaw's Paintings",
+    "Category": "Стройка",
+    "Description": "Добавляет картины",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "119",
+    "Name": "Spartan Shields",
+    "Category": "Оружие",
+    "Description": "Добавляет щиты",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "120",
+    "Name": "MrCrayfish's Vehicle Mod",
+    "Category": "Техника",
+    "Description": "Добавляет транспортные средства",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "121",
+    "Name": "Double Doors",
+    "Category": "Утилиты",
+    "Description": "Позволяет открывать двери парами",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "122",
+    "Name": "Storage Drawers",
+    "Category": "Утилиты",
+    "Description": "Добавляет ящики для хранения",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "123",
+    "Name": "Immersive Engineering",
+    "Category": "Техника",
+    "Description": "Инженерный мод с реалистичной техникой",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "124",
+    "Name": "UNU Parts Pack",
+    "Category": "Техника",
+    "Description": "Части для транспортных средств",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "125",
+    "Name": "UNU Civilian Vehicles",
+    "Category": "Техника",
+    "Description": "Гражданские транспортные средства",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "126",
+    "Name": "Immersive Railroading",
+    "Category": "Техника",
+    "Description": "Реалистичные поезда и железные дороги",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "127",
+    "Name": "Universal Mod Core",
+    "Category": "Библиотека",
+    "Description": "Ядро для модов",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "128",
+    "Name": "Track API",
+    "Category": "Библиотека",
+    "Description": "API для треков",
+    "IsLibrary": true,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "129",
+    "Name": "Chameleon",
+    "Category": "Утилиты",
+    "Description": "Позволяет менять облик",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "130",
+    "Name": "Plain Cars Pack",
+    "Category": "Техника",
+    "Description": "Обычные автомобили",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "131",
+    "Name": "Even More TNT",
+    "Category": "Оружие",
+    "Description": "Ещё больше видов TNT",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "132",
+    "Name": "Custom NPCs Items",
+    "Category": "Мобы",
+    "Description": "Предметы для Custom NPCs",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "133",
+    "Name": "Home Security",
+    "Category": "Техника",
+    "Description": "Система безопасности дома",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "134",
+    "Name": "Macaw's Paths and Pavings",
+    "Category": "Стройка",
+    "Description": "Добавляет дорожки и покрытия",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  },
+  {
+    "Id": "135",
+    "Name": "Chisels and Bits (Forge)",
+    "Category": "Стройка",
+    "Description": "Позволяет создавать мелкие детали из блоков",
+    "IsLibrary": false,
+    "CreatedAt": "2026-08-20T12:00:00"
+  }
 ]

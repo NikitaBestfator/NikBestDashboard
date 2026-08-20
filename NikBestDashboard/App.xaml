@@ -1,8 +1,15 @@
 ﻿<Application x:Class="NikBestDashboard.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:NikBestDashboard.Converters"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+
+        <!-- ===== КОНВЕРТЕРЫ ===== -->
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+        <converters:BooleanToStarColorConverter x:Key="BooleanToStarColorConverter"/>
+        <converters:PinColorConverter x:Key="PinColorConverter"/>
 
         <!-- ===== КИСТИ ДЛЯ ТЁМНОЙ ТЕМЫ ===== -->
         <SolidColorBrush x:Key="BackgroundBrush" Color="#1E1E2E"/>

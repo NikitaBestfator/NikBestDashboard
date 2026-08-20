@@ -56,7 +56,7 @@
                     <TextBlock Text="GitHub:" Foreground="#8888AA" Grid.Row="3" Grid.Column="0" Margin="0,2"/>
                     <TextBlock Grid.Row="3" Grid.Column="1" Margin="0,2">
                         <Hyperlink NavigateUri="https://github.com/твой-ник/NikBestDashboard" RequestNavigate="Hyperlink_RequestNavigate">
-                            <TextBlock Text="github.com/твой-ник/NikBestDashboard" Foreground="#7C4DFF" FontWeight="SemiBold"/>
+                            <TextBlock Text="github.com/ikitaBestfator/NikBestDashboard" Foreground="#7C4DFF" FontWeight="SemiBold"/>
                         </Hyperlink>
                     </TextBlock>
                 </Grid>
