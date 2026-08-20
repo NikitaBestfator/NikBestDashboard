@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -20,36 +19,10 @@ public partial class SettingsModule : UserControl
         LoadSettings();
     }
 
-    private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        if (ThemeComboBox.SelectedItem is ComboBoxItem item)
-        {
-            var theme = item.Content.ToString().Replace("🌙 ", "").Replace("☀️ ", "");
-            _settings.Theme = theme;
-            _service.Save(_settings);
-        
-            // Меняем тему сразу
-            App.ApplyTheme(theme);
-        
-            MessageBox.Show($"Тема изменена на {theme}.\nПерезапустите приложение для полного применения.", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-    }
-
     private void LoadSettings()
     {
         _settings = _service.Load();
 
-        // Устанавливаем тему в комбобокс
-        if (_settings.Theme == "Светлая")
-        {
-            ThemeComboBox.SelectedIndex = 1;
-        }
-        else
-        {
-            ThemeComboBox.SelectedIndex = 0;
-        }
-
-        // Показываем путь к данным
         var appData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         var dataPath = System.IO.Path.Combine(appData, "NikBestDashboard");
         DataPathText.Text = dataPath;

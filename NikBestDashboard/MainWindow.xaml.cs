@@ -29,6 +29,7 @@ public partial class MainWindow : Window
             "Units" => new UnitsModule(),
             "Schedule" => new ScheduleModule(),
             "Settings" => new SettingsModule(),
+            "Mods" => new ModsModule(),
             _ => new TextBlock { Text = "Модуль не найден", FontSize = 24, Foreground = System.Windows.Media.Brushes.Red }
         };
 

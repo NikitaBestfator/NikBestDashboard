@@ -10,10 +10,9 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Заголовок -->
         <TextBlock Grid.Row="0" Text="⚙️ Настройки" FontSize="28" FontWeight="Bold" Foreground="#EEEEFF" Margin="0,0,0,25"/>
 
-        <!-- Раздел: Данные -->
+        <!-- Данные -->
         <Border Grid.Row="1" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -23,14 +22,12 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Column="0" Text="📂 Папка с данными" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                
                 <TextBlock x:Name="DataPathText" Grid.Column="1" Foreground="#FFFFFF" FontSize="13" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="10,0,15,0"/>
-
                 <Button Grid.Column="2" Content="📂 Открыть" Click="OpenDataFolder_Click" Background="#444466" Foreground="White" Padding="12,5" BorderThickness="0" Cursor="Hand"/>
             </Grid>
         </Border>
 
-        <!-- Раздел: О программе -->
+        <!-- О программе -->
         <Border Grid.Row="2" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
             <StackPanel>
                 <TextBlock Text="📄 О программе" Foreground="#CCCCDD" FontWeight="SemiBold" Margin="0,0,0,10"/>
@@ -59,31 +56,14 @@
                     <TextBlock Text="GitHub:" Foreground="#8888AA" Grid.Row="3" Grid.Column="0" Margin="0,2"/>
                     <TextBlock Grid.Row="3" Grid.Column="1" Margin="0,2">
                         <Hyperlink NavigateUri="https://github.com/твой-ник/NikBestDashboard" RequestNavigate="Hyperlink_RequestNavigate">
-                            <TextBlock Text="github.com/NikitaBestfator/NikBestDashboard" Foreground="#7C4DFF" FontWeight="SemiBold"/>
+                            <TextBlock Text="github.com/твой-ник/NikBestDashboard" Foreground="#7C4DFF" FontWeight="SemiBold"/>
                         </Hyperlink>
                     </TextBlock>
                 </Grid>
             </StackPanel>
         </Border>
-        <!-- Раздел: Тема -->
-        <Border Grid.Row="1" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-        
-                <TextBlock Grid.Column="0" Text="🎨 Тема" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                
-                <ComboBox x:Name="ThemeComboBox" Grid.Column="1" Width="150" Margin="0,0,15,0" SelectionChanged="ThemeComboBox_SelectionChanged">
-                    <ComboBoxItem Content="🌙 Тёмная"/>
-                    <ComboBoxItem Content="☀️ Светлая"/>
-                </ComboBox>
-        
-                <TextBlock Grid.Column="2" Text="(нужен перезапуск)" Foreground="#888888" FontSize="12" VerticalAlignment="Center"/>
-            </Grid>
-        </Border>
+
+        <!-- Перезапуск -->
         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,5,0,0">
             <Button Content="🔄 Рестарт" Click="RestartApp_Click" Background="#444466" Foreground="White" FontWeight="Bold" FontSize="13" Padding="10,5" Cursor="Hand" BorderThickness="0"/>
         </StackPanel>

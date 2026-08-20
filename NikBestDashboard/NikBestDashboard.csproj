@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <Page Remove="Themes\DarkThemes.xaml" />
+      <Page Include="Modules\ModsModule.xaml" />
       <Page Include="Themes\DarkTheme.xaml" />
       <None Remove="Modules\UnitsModule.xaml" />
       <Page Include="Modules\UnitsModule.xaml" />
