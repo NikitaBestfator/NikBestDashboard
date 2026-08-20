@@ -65,7 +65,25 @@
                 </Grid>
             </StackPanel>
         </Border>
+        <!-- Раздел: Тема -->
+        <Border Grid.Row="1" Background="#2A2A3E" CornerRadius="10" Padding="15" Margin="0,0,0,15" BorderBrush="#444466" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
         
+                <TextBlock Grid.Column="0" Text="🎨 Тема" Foreground="#CCCCDD" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                
+                <ComboBox x:Name="ThemeComboBox" Grid.Column="1" Width="150" Margin="0,0,15,0" SelectionChanged="ThemeComboBox_SelectionChanged">
+                    <ComboBoxItem Content="🌙 Тёмная"/>
+                    <ComboBoxItem Content="☀️ Светлая"/>
+                </ComboBox>
+        
+                <TextBlock Grid.Column="2" Text="(нужен перезапуск)" Foreground="#888888" FontSize="12" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,5,0,0">
             <Button Content="🔄 Рестарт" Click="RestartApp_Click" Background="#444466" Foreground="White" FontWeight="Bold" FontSize="13" Padding="10,5" Cursor="Hand" BorderThickness="0"/>
         </StackPanel>

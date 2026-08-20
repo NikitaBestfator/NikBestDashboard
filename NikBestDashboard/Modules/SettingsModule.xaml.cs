@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.IO.Compression;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -21,18 +20,38 @@ public partial class SettingsModule : UserControl
         LoadSettings();
     }
 
+    private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (ThemeComboBox.SelectedItem is ComboBoxItem item)
+        {
+            var theme = item.Content.ToString().Replace("🌙 ", "").Replace("☀️ ", "");
+            _settings.Theme = theme;
+            _service.Save(_settings);
+        
+            // Меняем тему сразу
+            App.ApplyTheme(theme);
+        
+            MessageBox.Show($"Тема изменена на {theme}.\nПерезапустите приложение для полного применения.", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+    }
+
     private void LoadSettings()
     {
         _settings = _service.Load();
 
+        // Устанавливаем тему в комбобокс
+        if (_settings.Theme == "Светлая")
+        {
+            ThemeComboBox.SelectedIndex = 1;
+        }
+        else
+        {
+            ThemeComboBox.SelectedIndex = 0;
+        }
+
+        // Показываем путь к данным
         var appData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         var dataPath = System.IO.Path.Combine(appData, "NikBestDashboard");
-        
-        if (!System.IO.Directory.Exists(dataPath))
-        {
-            System.IO.Directory.CreateDirectory(dataPath);
-        }
-        
         DataPathText.Text = dataPath;
         VersionText.Text = _settings.AppVersion;
     }
@@ -79,59 +98,4 @@ public partial class SettingsModule : UserControl
             Application.Current.Shutdown();
         }
     }
-
-    private void BackupData_Click(object sender, RoutedEventArgs e)
-{
-    try
-    {
-        var appData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        var sourceFolder = System.IO.Path.Combine(appData, "NikBestDashboard");
-        
-        if (!System.IO.Directory.Exists(sourceFolder))
-        {
-            MessageBox.Show("Папка с данными не найдена!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-            return;
-        }
-
-        var backupFolder = System.IO.Path.Combine(appData, "NikBestDashboard", "Backups");
-        System.IO.Directory.CreateDirectory(backupFolder);
-        
-        var timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss-fff");
-        var guid = Guid.NewGuid().ToString().Substring(0, 8);
-        var backupPath = System.IO.Path.Combine(backupFolder, $"backup_{timestamp}_{guid}.zip");
-        
-        // ПОВТОРНЫЕ ПОПЫТКИ С ЗАДЕРЖКОЙ (до 5 раз)
-        bool success = false;
-        for (int attempt = 0; attempt < 5; attempt++)
-        {
-            try
-            {
-                if (File.Exists(backupPath))
-                {
-                    File.Delete(backupPath);
-                }
-                
-                System.Threading.Thread.Sleep(100 * (attempt + 1)); // 100, 200, 300, 400, 500 мс
-                
-                ZipFile.CreateFromDirectory(sourceFolder, backupPath);
-                success = true;
-                break;
-            }
-            catch (IOException)
-            {
-                if (attempt == 4) throw; // Если 5-я попытка не удалась
-                System.Threading.Thread.Sleep(500); // Ждём полсекунды перед повторной попыткой
-            }
-        }
-        
-        if (success)
-        {
-            MessageBox.Show($"✅ Бэкап создан!\n\n📁 {backupPath}", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-    }
-    catch (Exception ex)
-    {
-        MessageBox.Show($"❌ Ошибка создания бэкапа:\n{ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-    }
-}
 }

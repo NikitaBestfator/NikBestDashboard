@@ -6,12 +6,18 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <EnableDefaultPageItems>false</EnableDefaultPageItems>
     </PropertyGroup>
 
     <ItemGroup>
       <None Update="Data\ideas.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Remove="Themes\DarkThemes.xaml" />
+      <Page Include="Themes\DarkTheme.xaml" />
     </ItemGroup>
 
 </Project>

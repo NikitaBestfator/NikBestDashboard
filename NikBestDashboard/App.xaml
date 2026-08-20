@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-
-        <!-- ===== СТИЛЬ ДЛЯ COMBOBOX (как в викторине) ===== -->
+        
+        <!-- Стили, которые не зависят от темы -->
         <Style TargetType="ComboBox">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
@@ -12,11 +12,9 @@
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="8,5"/>
             <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Height" Value="32"/>
         </Style>
 
-        <!-- ===== СТИЛЬ ДЛЯ ЭЛЕМЕНТОВ ВЫПАДАЮЩЕГО СПИСКА ===== -->
         <Style TargetType="ComboBoxItem">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
@@ -32,17 +30,12 @@
                     <Setter Property="Background" Value="White"/>
                     <Setter Property="Foreground" Value="Black"/>
                 </Trigger>
-                <Trigger Property="IsHighlighted" Value="True">
-                    <Setter Property="Background" Value="#E0E0E0"/>
-                    <Setter Property="Foreground" Value="Black"/>
-                </Trigger>
             </Style.Triggers>
         </Style>
 
-        <!-- ===== СТИЛЬ ДЛЯ КНОПОК МЕНЮ ===== -->
         <Style x:Key="MenuButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="#CCCCDD"/>
+            <Setter Property="Foreground" Value="{StaticResource TextSecondaryBrush}"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Padding" Value="10,10"/>
             <Setter Property="Margin" Value="0,3"/>
@@ -60,10 +53,10 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#3A3A52"/>
+                    <Setter Property="Background" Value="{StaticResource CardBrush}"/>
                 </Trigger>
                 <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="Background" Value="#7C4DFF"/>
+                    <Setter Property="Background" Value="{StaticResource AccentBrush}"/>
                     <Setter Property="Foreground" Value="White"/>
                 </Trigger>
             </Style.Triggers>
