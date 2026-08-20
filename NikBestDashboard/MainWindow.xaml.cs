@@ -44,13 +44,13 @@ public partial class MainWindow : Window
         {
             switch (e.Key)
             {
-                case Key.D1: LoadModule("Dashboard"); e.Handled = true; break;
-                case Key.D2: LoadModule("Ideas"); e.Handled = true; break;
-                case Key.D3: LoadModule("Titles"); e.Handled = true; break;
-                case Key.D4: LoadModule("Units"); e.Handled = true; break;
-                case Key.D5: LoadModule("Schedule"); e.Handled = true; break;
-                case Key.D6: LoadModule("Mods"); e.Handled = true; break;
-                case Key.D7: LoadModule("Settings"); e.Handled = true; break;
+                case Key.D1: LoadModule("Ideas"); e.Handled = true; break;
+                case Key.D2: LoadModule("Titles"); e.Handled = true; break;
+                case Key.D3: LoadModule("Units"); e.Handled = true; break;
+                case Key.D4: LoadModule("Schedule"); e.Handled = true; break;
+                case Key.D5: LoadModule("Mods"); e.Handled = true; break;
+                case Key.D6: LoadModule("Settings"); e.Handled = true; break;
+                case Key.D7: LoadModule("Search"); e.Handled = true; break;
             }
         }
         base.OnKeyDown(e);

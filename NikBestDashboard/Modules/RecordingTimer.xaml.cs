@@ -42,7 +42,6 @@ public partial class RecordingTimer : Window
             _isRunning = true;
             _timer.Start();
             StatusText.Text = "⏳ Идёт запись...";
-            StartButton.Content = "⏹️ Стоп";
             PauseButton.IsEnabled = true;
             PauseButton.Content = "⏸️ Пауза";
             return;
@@ -52,7 +51,6 @@ public partial class RecordingTimer : Window
         _isRunning = true;
         _isPaused = false;
         _timer.Start();
-        StartButton.Content = "⏹️ Стоп";
         PauseButton.IsEnabled = true;
         StatusText.Text = "⏳ Идёт запись...";
         TimeComboBox.IsEnabled = false;
@@ -70,7 +68,6 @@ public partial class RecordingTimer : Window
             _timer.Start();
             PauseButton.Content = "⏸️ Пауза";
             StatusText.Text = "⏳ Идёт запись...";
-            StartButton.IsEnabled = true;
         }
         else
         {
@@ -78,7 +75,6 @@ public partial class RecordingTimer : Window
             _timer.Stop();
             PauseButton.Content = "▶️ Продолжить";
             StatusText.Text = "⏸️ На паузе";
-            StartButton.IsEnabled = false;
         }
     }
 
@@ -88,8 +84,6 @@ public partial class RecordingTimer : Window
         _isRunning = false;
         _isPaused = false;
         _remainingSeconds = 0;
-        StartButton.Content = "▶️ Старт";
-        StartButton.IsEnabled = true;
         PauseButton.IsEnabled = false;
         PauseButton.Content = "⏸️ Пауза";
         TimeComboBox.IsEnabled = true;
@@ -108,11 +102,9 @@ public partial class RecordingTimer : Window
             _timer.Stop();
             _isRunning = false;
             StatusText.Text = "✅ Запись завершена!";
-            StartButton.Content = "▶️ Старт";
             PauseButton.IsEnabled = false;
             TimeComboBox.IsEnabled = true;
             UpdateDisplay(0);
-
             PlayBeep(1000, 500);
             System.Threading.Thread.Sleep(200);
             PlayBeep(1000, 500);
